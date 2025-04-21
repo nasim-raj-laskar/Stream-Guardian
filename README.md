@@ -8,7 +8,7 @@
 
 ## 📌 Problem Statement
 
-**Problem Statement 18 – Proactively Moderate Toxicity in Online Communities**
+**Problem Statement 1 - Weave Al magic with Groq**
 
 ---
 
