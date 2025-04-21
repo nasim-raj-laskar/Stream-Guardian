@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamGuardian</title>
+    <link rel="icon" href="/static/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>StreamGuardian</h1>
+            <p>Real-time Toxic Comment Detection Dashboard</p>
+        </header>
+
+        <div class="alert-banner" id="toxic-alert" style="display: none;">
+            <div class="alert-content">
+                <span class="alert-icon">⚠️</span>
+                <span class="alert-text" id="alert-text"></span>
+                <span class="alert-time" id="alert-time"></span>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>Total Messages</h3>
+                <div id="total-count" class="count">0</div>
+            </div>
+            <div class="stat-card clean">
+                <h3>Clean Messages</h3>
+                <div id="clean-count" class="count">0</div>
+            </div>
+            <div class="stat-card toxic">
+                <h3>Toxic Messages</h3>
+                <div id="toxic-count" class="count">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Toxicity Rate</h3>
+                <div id="toxicity-rate" class="count">0%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Toxic/Min</h3>
+                <div id="toxic-per-minute" class="count">0</div>
+            </div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-container">
+                <div id="ratioChart"></div>
+            </div>
+            <div class="chart-container">
+                <div id="trendChart"></div>
+            </div>
+        </div>
+
+        <div class="messages-container">
+            <div class="filter-controls">
+                <button id="show-all" class="active">All Messages</button>
+                <button id="show-clean">Clean Only</button>
+                <button id="show-toxic">Toxic Only</button>
+                <div class="search-box">
+                    <input type="text" id="message-search" placeholder="Search messages...">
+                </div>
+            </div>
+            <div class="messages-window" id="messages-window">
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
