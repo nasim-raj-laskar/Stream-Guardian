@@ -42,8 +42,8 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 
 ### Core Technologies Used:
 - **Frontend:** HTML, CSS, JavaScript, Chart.js  
-- **Backend:** Flask (Python), Flask-SocketIO  
-- **Database:** In-memory Python storage (for demo), optionally Redis  
+- **Backend:** Flask (Python), Flask-SocketIO
+- **Streaming** Fluvio Python SDK
 - **APIs:** Groq API for toxic comment prediction  
 - **Hosting:** Render (Backend + Frontend)
 
@@ -65,13 +65,13 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 - ✅ **Export Support**: CSV download for logs, PNG/SVG export for graphs  
 - ✅ **Filter Tabs**: Toggle between All / Clean / Toxic messages  
 - ✅ **Emoji Flagging**: ⚠️ emojis clearly mark toxic content  
-
+![dashboard](https://github.com/nasim-raj-laskar/Stream-Guardian/blob/main/img/Screenshot%202025-04-20%20211204.png)
 ---
 
 ## 📽️ Demo & Deliverables
 
 - **Demo Video Link:** [https://youtu.be/demo-link](https://youtu.be/demo-link)  
-- **Pitch Deck / PPT Link:** [https://docs.google.com/presentation/d/streamguardian-ppt](https://docs.google.com/presentation/d/streamguardian-ppt)
+- **PPT Link:** [click here](https://github.com/nasim-raj-laskar/Stream-Guardian/blob/main/img/presentation.pdf)
 
 ---
 
@@ -86,8 +86,10 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 ## 🧪 How to Run the Project
 
 ### Requirements:
-- Python 3.10+  
-- Node.js (for frontend testing if needed)  
+- Operating System: Linux or macOS (WSL2 supported on Windows)
+- Rust toolchain: Rust 1.56 or newer
+- curl: For installation
+- Python 3.10+    
 - Groq API Key  
 - Fluvio CLI (with local topic setup)
 
@@ -96,12 +98,36 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 # Clone the repo
 git clone https://github.com/bitbenders/streamguardian
 
+#install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+#reload the shell
+source $HOME/.cargo/env
+
+#install Fluvio CLI
+curl -fsSL https://packages.fluvio.io/v1/install.sh | bash
+
+#Add to your path
+export PATH="$HOME/.fluvio/bin:$PATH"
+
+#install fluvio python sdk
+pip install fluvio
+
+#Start a local clustor
+fluvio cluster start --local
+
+#Create the topic names "chat-room"
+fluvio topic create chat-room
+
+#Run the Fluvio producer for comments streaming
+python3 -m streamm.producer
+
 # Backend setup
-cd streamguardian/dashboard
-pip install -r requirements.txt
+#Install dependencies
+pip install flask flask-socketio eventlet
 
 # Run the Flask server
-python app.py
+python3 -m dashboard.app
 ```
 
 Optional:
