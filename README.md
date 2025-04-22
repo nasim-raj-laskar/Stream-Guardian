@@ -50,10 +50,7 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 ### Sponsor Technologies Used:
 - ✅ **Groq:** Used Groq’s API for ultra-low-latency toxicity classification  
 - ✅ **Fluvio:** Integrated real-time data stream from Fluvio broker into the backend consumer  
-- [ ] **Monad:**  
-- [ ] **Base:**  
-- [ ] **Screenpipe:**  
-- [ ] **Stellar:**  
+
 
 ---
 
