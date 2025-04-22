@@ -96,7 +96,7 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 ### Local Setup:
 ```bash
 # Clone the repo
-git clone https://github.com/bitbenders/streamguardian
+https://github.com/nasim-raj-laskar/Stream-Guardian.git
 
 #install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
