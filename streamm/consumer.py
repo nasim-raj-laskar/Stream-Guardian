@@ -4,7 +4,7 @@ import sys
 import os
 from datetime import datetime
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../models')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..dashboard/models')))
 
 from models.groq_moderator import moderate_message
 
