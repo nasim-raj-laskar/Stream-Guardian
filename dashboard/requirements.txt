@@ -4,3 +4,4 @@ eventlet
 fluvio
 gunicorn
 groq
+python-dotenv
