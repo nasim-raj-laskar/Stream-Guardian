@@ -1,16 +1,6 @@
-![github-submission-banner](https://github.com/user-attachments/assets/a1493b84-e4e2-456e-a791-ce35ee2bcf2f)
-
 # 🚀 StreamGuardian
 
 > Real-time toxic comment detection dashboard powered by Fluvio and Groq
-
----
-
-## 📌 Problem Statement
-
-Problem Statement 3 - Real-Time Data Experiences with Fluvio
-
----
 
 ## 🎯 Objective
 
@@ -25,19 +15,6 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 
 ---
 
-## 🧠 Team & Approach
-
-### Solo Developer :  
-- [Nasim Raj Laskar](https://github.com/nasim-raj-laskar) 
-
-### Approach:
-- Chose this problem for its **high social impact** in today’s digital world.
-- Tackled the **real-time challenge** by combining Fluvio with Groq's lightning-fast inference.
-- Focused heavily on **dashboard usability** for moderators.
-- Iterated on design to make filtering, flagging, and downloading effortless.
-
----
-
 ## 🛠️ Tech Stack
 
 ### Core Technologies Used:
@@ -47,10 +24,9 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 - **APIs:** Groq API for toxic comment prediction  
 - **Hosting:** Render (Backend + Frontend)
 
-### Sponsor Technologies Used:
+### Technologies Used:
 - ✅ **Groq:** Used Groq’s API for ultra-low-latency toxicity classification  
 - ✅ **Fluvio:** Integrated real-time data stream from Fluvio broker into the backend consumer  
-
 
 ---
 
@@ -63,21 +39,6 @@ It empowers moderators and platforms to maintain healthy digital spaces.
 - ✅ **Filter Tabs**: Toggle between All / Clean / Toxic messages  
 - ✅ **Emoji Flagging**: ⚠️ emojis clearly mark toxic content  
 ![dashboard](https://github.com/nasim-raj-laskar/Stream-Guardian/blob/main/img/Screenshot%202025-04-20%20211204.png)
----
-
-## 📽️ Demo & Deliverables
-
-- **Demo Video Link:** [click here](https://www.youtube.com/watch?v=vP7q-E1vw3c)  
-- **PPT Link:** [click here](https://github.com/nasim-raj-laskar/Stream-Guardian/blob/main/img/presentation.pdf)
-
----
-
-## ✅ Tasks & Bonus Checklist
-
-- ✅ **All members followed required social channels and submitted the form**  
-- ✅ **Bonus Task 1 - Badges shared & form submitted (2 points)**  
-- ✅ **Bonus Task 2 - Signed up for Sprint.dev & submitted form (3 points)**
-
 ---
 
 ## 🧪 How to Run the Project
@@ -144,21 +105,3 @@ Optional:
 
 ---
 
-## 📎 Resources / Credits
-
-- Groq API Docs  
-- Fluvio Streaming Platform  
-- Flask & Flask-SocketIO  
-- Chart.js for dashboard visuals  
-- Toxic comment dataset from Kaggle  
-- Inspiration from Google’s Perspective API
-
----
-
-## 🏁 Final Words
-
-StreamGuardian was born from a passion to make online spaces safer.  
-We brainstormed hard, pivoted tech stacks twice, and learned to stream and predict in real time!  
-Huge thanks to the mentors and organizers 🙌
-
----
